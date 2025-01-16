@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+    border: 1px solid;
+    align-items: center;
+    margin-top: 3vh;
+
+    td{
+      border: 1px solid;
+      text-align: center;
+    }
+
+    th{
+      border: 1px solid;
+    }
+
+
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      
+    }
+  }

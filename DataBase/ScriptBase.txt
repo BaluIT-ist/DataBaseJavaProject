@@ -1,14 +1,14 @@
 CREATE DATABASE green_energy;
 
 CREATE TABLE green_energy.main_type(
-mainTypeID int PRIMARY KEY auto_increment,
-mainType   int NOT NULL
+main_typeid int PRIMARY KEY auto_increment,
+main_type   int NOT NULL
 );
 
 CREATE TABLE green_energy.total(
 referenced_year int PRIMARY KEY,
-totalProd int NOT NULL,
-totalConsum int NOT NULL
+total_prod int NOT NULL,
+total_consum int NOT NULL
 );
 
 CREATE TABLE green_energy.green_energy(
@@ -16,8 +16,8 @@ ID int PRIMARY KEY auto_increment,
 county   int NOT NULL,
 prod   int NOT NULL,
 consum int NOT NULL,
-mainTypeID int	NOT NULL,
-FOREIGN KEY(mainTypeID)	REFERENCES main_type(mainTypeID)
+main_typeid int	NOT NULL,
+FOREIGN KEY(main_typeid)	REFERENCES main_type(main_typeid)
 );
 
 CREATE TABLE green_energy.total_green_energy(
@@ -28,11 +28,11 @@ FOREIGN KEY(green_energy) REFERENCES green_energy(ID),
 FOREIGN KEY(referenced_year) REFERENCES total(referenced_year)
 );
 
-INSERT INTO green_energy.main_type(mainType) 
+INSERT INTO green_energy.main_type(main_type) 
 VALUES (1),(2),(3),(4),(5),(6),(7);
-INSERT INTO green_energy.total(referenced_year,totalProd,totalConsum) 
+INSERT INTO green_energy.total(referenced_year,total_prod,total_consum) 
 VALUES (2023,57101,49042),(2022,53500,52708),(2021,57000,57000);
-INSERT INTO green_energy.green_energy(county,prod,consum,mainTypeID)
+INSERT INTO green_energy.green_energy(county,prod,consum,main_typeid)
 VALUES
 (1,102,0,3),(2,1044,0,3),(3,220,0,3),(4,0,0,3),(5,50,18,5),(6,25,9,1),(7,15,5,3),(8,60,22,1),(9,25,9,3),(10,10,4,3),
 (11,1340,15,5),(12,2170,25,1),(13,1120,7,3),(14,50,18,5),(15,25,9,1),(16,15,6,3),(17,41,12,5),(18,23,41,1),(19,14,21,5),(20,26,11,4),

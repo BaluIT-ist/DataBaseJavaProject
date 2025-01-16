@@ -19,7 +19,7 @@ public class GreenEnergy {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name="mainTypeID")
+    @JoinColumn(name="main_typeid")
     private MainType mainTypeID;
 
     @Column(name="consum")

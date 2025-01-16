@@ -1,17 +1,15 @@
 package com.dan.green_energy.service;
 
 import com.dan.green_energy.exceptions.BaluException;
-import com.dan.green_energy.model.dto.MainTypeDTO;
 import com.dan.green_energy.model.dto.TotalDTO;
-import com.dan.green_energy.model.entity.MainType;
 import com.dan.green_energy.model.entity.Total;
-import com.dan.green_energy.model.repository.MainTypeRepository;
 import com.dan.green_energy.model.repository.TotalRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,12 +47,17 @@ public class TotalService {
         return modelMapper.map(total,TotalDTO.class);
     }
 
-    public TotalDTO updateTotal(Integer id,TotalDTO totalDTO) throws BaluException {
+    public TotalDTO updateTotal(Integer id,TotalDTO totalDTO) {
         Total existingTotal=totalRepository.findById(id)
-                .orElseThrow(() -> new BaluException("Couldn't find the next id:"+ id));
+                .orElseThrow(() -> new ResourceNotFoundException("Couldn't find the next id:"+ id));
         modelMapper.map(totalDTO,existingTotal);
         existingTotal=totalRepository.save(existingTotal);
         return modelMapper.map(existingTotal,TotalDTO.class);
+    }
 
+    public void deleteTotal(int id){
+        Total total=totalRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Couldn't find the next id:"+id));
+        totalRepository.delete(total);
     }
 }

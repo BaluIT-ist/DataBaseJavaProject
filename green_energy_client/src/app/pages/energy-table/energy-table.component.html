@@ -1,0 +1,28 @@
+<div class="tableDivision">
+  <div class="actualTable">
+    <table>
+      <thead>
+        <tr>
+          <th> No. </th>
+          <th> County </th>
+          <th> Consumed </th>
+          <th> Produced </th>
+          <th> Main Type </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let row of rows">
+          <td> {{row.index}} </td>
+          <td> {{ row.county.toString()}} </td>
+          <td> {{row.consum.toString()}}</td>
+          <td>  {{row.prod.toString()}}</td>
+          <td>  {{row.mainType.toString()}}</td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+  </div>
+</div>

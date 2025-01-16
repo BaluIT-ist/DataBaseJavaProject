@@ -1,0 +1,33 @@
+<div class="total">
+    <div class="totalProdCons">
+        <div>
+            <p>TotalProd : {{totalProd}}</p>
+        </div>
+        <div>
+            <p>TotalCons : {{totalCons}}</p>
+
+        </div>
+    </div>
+
+    <div class="DropdownDivision">
+        <form [formGroup]="form">
+            <select formControlName="selectedYear" (change)="updateTotal()">
+                <option value="" disabled>Select a year</option>
+                <option *ngFor="let total of totals" [value]="total.referencedYear">{{ total.referencedYear }}</option>
+            </select>
+        </form>
+        
+<!-- 
+        <mat-form-field>
+            <mat-label>Select Year</mat-label>
+            <mat-select>
+                @for (total of totals; track total) {
+                <mat-option [value]="total.referencedYear">{{total.referencedYear}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field> -->
+    </div>
+
+
+
+</div>

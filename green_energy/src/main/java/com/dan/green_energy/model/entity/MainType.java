@@ -1,14 +1,9 @@
 package com.dan.green_energy.model.entity;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import com.dan.green_energy.enums.GreenEnergySource;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -18,10 +13,11 @@ import javax.persistence.Table;
 @Table(name = "main_type")
 public class MainType {
     @Id
-    @Column(name="mainTypeID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="main_typeid", nullable = false)
     private int mainTypeID;
 
-    @Column(name="mainType")
+    @Column(name="main_type", nullable = false)
     private int mainType;
 
 

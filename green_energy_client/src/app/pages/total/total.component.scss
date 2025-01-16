@@ -1,0 +1,56 @@
+.total {
+    border: 2px solid rgb(255, 187, 0);
+    background-color: #2ecc71; /* Subtle green shade for better contrast */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px; /* Smooth rounded edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+    .totalProdCons {
+        border: 2px solid #34495e; /* Deep gray for a modern touch */
+        background-color: #ecf0f1; /* Light gray background for contrast */
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 10px; /* Add spacing between row elements */
+        }
+    }
+
+    .DropdownDivision {
+        border: 2px solid #2980b9; /* Vibrant blue for better visibility */
+        background-color: #dfe6e9; /* Soft light gray for background */
+        display: flex;
+        align-self: center;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        select {
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: #2c3e50; /* Modern dark gray */
+            cursor: pointer;
+            outline: none;
+
+            option {
+                color: #2c3e50;
+                background-color: #ecf0f1;
+                padding: 5px;
+            }
+        }
+
+        select:hover {
+            background-color: #bdc3c7; /* Slight hover effect for feedback */
+            border-radius: 5px;
+        }
+    }
+}

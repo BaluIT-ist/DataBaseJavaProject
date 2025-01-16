@@ -21,10 +21,10 @@ public class Total {
     @Column(name="referenced_year")
     private int referencedYear;
 
-    @Column(name = "totalProd")
+    @Column(name = "total_prod")
     private int totalProd;
 
-    @Column(name="totalConsum")
+    @Column(name="total_consum")
     private int totalConsum;
 
 

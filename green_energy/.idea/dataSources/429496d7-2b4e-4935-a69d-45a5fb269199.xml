@@ -1008,8 +1008,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="292" parent="1" name="green_energy">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-12-27.16:11:00</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-12-27.12:11:00</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2025-01-05.15:14:36</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2025-01-05.11:14:36</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="293" parent="1" name="mysql.infoschema">
@@ -1067,14 +1067,14 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="305" parent="297" name="mainTypeID">
+    <column id="305" parent="297" name="main_typeid">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <foreign-key id="306" parent="297" name="green_energy_ibfk_1">
-      <ColNames>mainTypeID</ColNames>
-      <RefColNames>mainTypeID</RefColNames>
+      <ColNames>main_typeid</ColNames>
+      <RefColNames>main_typeid</RefColNames>
       <RefTableName>main_type</RefTableName>
     </foreign-key>
     <index id="307" parent="297" name="PRIMARY">
@@ -1082,8 +1082,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="308" parent="297" name="mainTypeID">
-      <ColNames>mainTypeID</ColNames>
+    <index id="308" parent="297" name="main_typeid">
+      <ColNames>main_typeid</ColNames>
       <Type>btree</Type>
     </index>
     <key id="309" parent="297" name="PRIMARY">
@@ -1091,19 +1091,19 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="310" parent="298" name="mainTypeID">
-      <AutoIncrement>7</AutoIncrement>
+    <column id="310" parent="298" name="main_typeid">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="311" parent="298" name="mainType">
+    <column id="311" parent="298" name="main_type">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <index id="312" parent="298" name="PRIMARY">
-      <ColNames>mainTypeID</ColNames>
+      <ColNames>main_typeid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -1117,12 +1117,12 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="315" parent="299" name="totalProd">
+    <column id="315" parent="299" name="total_prod">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="316" parent="299" name="totalConsum">
+    <column id="316" parent="299" name="total_consum">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
